@@ -1,0 +1,147 @@
+<!-- Section: Design Block -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<section class="background-radial-gradient overflow-hidden">
+<style>
+.background-radial-gradient {
+  background-color: hsl(218, 41%, 15%);
+  background-image: radial-gradient(650px circle at 0% 0%,
+      hsl(218, 41%, 35%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%),
+    radial-gradient(1250px circle at 100% 100%,
+      hsl(218, 41%, 45%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%);
+}
+
+#radius-shape-1 {
+  height: 220px;
+  width: 220px;
+  top: -60px;
+  left: -130px;
+  background: radial-gradient(#44006b, #ad1fff);
+  overflow: hidden;
+}
+
+#radius-shape-2 {
+  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  bottom: -60px;
+  right: -110px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(#44006b, #ad1fff);
+  overflow: hidden;
+}
+
+.bg-glass {
+  background-color: hsla(0, 0%, 100%, 0.9) !important;
+  backdrop-filter: saturate(200%) blur(25px);
+}
+</style>
+
+<div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+<div class="row gx-lg-5 align-items-center mb-5">
+  <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+    <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+      The best offers <br />
+      <span style="color: hsl(218, 81%, 75%)">Are Waiting for you</span>
+    </h1>
+    <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+      Welcome to the ONE 8 family !!
+    </p>
+  </div>
+
+  <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+    <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+    <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+    <div class="card bg-glass">
+      <div class="card-body px-4 py-5 px-md-5">
+        
+
+
+          <form action="/signup" method="POST"  >
+
+
+            {% csrf_token %}
+           <div class="form-group ">
+            <label for="exampleInputEmail1">First Name</label>
+            <input required type="text" class="form-control form-control-sm" name="first_name" aria-describedby="emailHelp" >
+          
+          </div>
+           <div class="form-group ">
+            <label for="exampleInputEmail1">Last Name</label>
+            <input required type="text" class="form-control form-control-sm" name="last_name"  aria-describedby="emailHelp" >
+          
+          </div>
+          
+           <div class="form-group ">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input  required type="text" class="form-control form-control-sm" name="phone" >
+          
+          </div>
+          
+          
+          
+          <div class="form-group">
+          
+            <label for="exampleInputEmail1">Email address</label>
+          
+            <input  required  type="email" class="form-control form-control-sm" name="customer_email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label  for="exampleInputPassword1">Password</label>
+            <input required type="password" class="form-control form-control-sm" name="customer_password" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Confirm</label>
+          </div>
+          <button type="submit" class="btn btn-info" >Create Account</button>
+          
+          
+          </div>
+          </div>
+          
+          </div>
+          </form>
+          
+{% endblock %}
+<!-- Section: Design Block -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
